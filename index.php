@@ -63,7 +63,7 @@
                             <div class="card-body">
                                 <div class="row g-3">
                                     <div class="col-md-6">
-                                        <label for="stasiun" class="form-label">Input Nama Stasiun</label>
+                                        <label for="stasiun" class="form-label">Nama Stasiun</label>
                                         <input type="text" class="form-control" placeholder="" aria-label="3jam">
                                     </div>
                                     <div class="col-md-6">
