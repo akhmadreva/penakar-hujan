@@ -10,8 +10,26 @@
 
     <!-- Bootstrap CSS -->
     <link href="assets/css/style.css" rel="stylesheet"> 
+    <!-- framework bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-    <title>Hello, world!</title>
+    <!-- datepicker bootstrap -->
+    <link rel="stylesheet" href="bootstrap-datepicker/css/bootstrap-datepicker.min.css">
+    <script src="bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="bootstrap-datepicker/locales/bootstrap-datepicker.id.min.js"></script>
+    <script>
+        $(function() {
+            $("#date").datepicker({
+                autoclose:true,
+                todayHighlight:true,
+                format:'yyyy-mm-dd',
+                language: 'id'
+            });
+        });
+    </script>
+    <title>Penakar Hujan</title>
   </head>
   <body>
     
@@ -61,44 +79,11 @@
                             </div>
                             <form>
                             <div class="card-body">
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label for="stasiun" class="form-label">Nama Stasiun</label>
-                                        <input type="text" class="form-control" placeholder="" aria-label="3jam">
+                                <div class="row g-1">
+                                    <div class="col-md-2">
+                                        <label for="tanggal" class="form-label">Tanggal Laporan</label>
+                                        <input type="text" class="form-control" id="date">
                                     </div>
-                                    <div class="col-md-6">
-                                        <label for="no_stasiun" class="form-label">No. Stasiun</label>
-                                        <input type="text" class="form-control" placeholder="" aria-label="6jam">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="kabupaten" class="form-label">Kabupaten</label>
-                                        <input type="text" class="form-control" placeholder="" aria-label="12jam">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="ketinggian" class="form-label">Ketinggian</label>
-                                        <input type="text" class="form-control" placeholder="" aria-label="3jam">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="bulan" class="form-label">Laporan Bulan</label>
-                                        <input type="text" class="form-control" placeholder="" aria-label="6jam">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="tahun" class="form-label">Tahun</label>
-                                        <input type="text" class="form-control" placeholder="" aria-label="12jam">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="form" class="form-label">Form</label>
-                                        <input type="text" class="form-control" placeholder="" aria-label="3jam">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="nama_pengamat" class="form-label">Nama Pengamat</label>
-                                        <input type="text" class="form-control" placeholder="" aria-label="6jam">
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="col-6">
-                                    <button type="reset" class="btn btn-danger">Reset</button>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
                                 </div>
                             </div>
                             </form>
@@ -111,42 +96,37 @@
                             <form>
                             <div class="card-body">
                                 <div class="row g-3">
-                                    <div class="col-sm">
+                                    <div class="col-md-2">
                                         <label for="input5menit" class="form-label">5 Menit</label>
                                         <input type="text" class="form-control" placeholder="5 menit pertama" aria-label="5menit">
                                     </div>
-                                    <div class="col-sm">
+                                    <div class="col-md-2">
                                         <label for="input10menit" class="form-label">10 Menit</label>
                                         <input type="text" class="form-control" placeholder="10 menit pertama" aria-label="10menit">
                                     </div>
-                                    <div class="col-sm">
+                                    <div class="col-md-2">
                                         <label for="input15menit" class="form-label">15 Menit</label>
                                         <input type="text" class="form-control" placeholder="15 menit Pertama" aria-label="15menit">
                                     </div>
-                                    <div class="col-sm">
+                                    <div class="col-md-2">
                                         <label for="input30menit" class="form-label">30 Menit</label>
                                         <input type="text" class="form-control" placeholder="30 menit pertama" aria-label="30menit">
                                     </div>
                                 </div>
                                 <br>
                                 <div class="row g-3">
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <label for="input45menit" class="form-label">45 Menit</label>
                                         <input type="text" class="form-control" placeholder="45 menit pertama" aria-label="45menit">
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <label for="input60menit" class="form-label">60 Menit</label>
                                         <input type="text" class="form-control" placeholder="60 menit pertama" aria-label="60menit">
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <label for="input120menit" class="form-label">120 Menit</label>
                                         <input type="text" class="form-control" placeholder="120 menit Pertama" aria-label="120menit">
                                     </div>
-                                </div>
-                                <br>
-                                <div class="col-6">
-                                    <button type="reset" class="btn btn-danger">Reset</button>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
                                 </div>
                             </div>
                             </form>
@@ -159,24 +139,20 @@
                             <form>
                             <div class="card-body">
                                 <div class="row g-3">
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <label for="input3jam" class="form-label">3 Jam</label>
                                         <input type="text" class="form-control" placeholder="3 jam pertama" aria-label="3jam">
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <label for="input6jam" class="form-label">6 Jam</label>
                                         <input type="text" class="form-control" placeholder="6 jam pertama" aria-label="6jam">
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <label for="input12jam" class="form-label">12 Jam</label>
                                         <input type="text" class="form-control" placeholder="12 jam Pertama" aria-label="12jam">
                                     </div>
                                 </div>
                                 <br>
-                                <div class="col-6">
-                                    <button type="reset" class="btn btn-danger">Reset</button>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </div>
                             </div>
                             </form>
                         </div>
@@ -285,14 +261,14 @@
                                         <input type="text" class="form-control" placeholder="" aria-label="6jam">
                                     </div>
                                 </div>
-                                <br>
+                            </div>
+                            </form>
+                        </div>
+                        <br>
                                 <div class="col-6">
                                     <button type="reset" class="btn btn-danger">Reset</button>
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </div>
-                            </div>
-                            </form>
-                        </div>
                     </div>
                 </div>
             </div>
