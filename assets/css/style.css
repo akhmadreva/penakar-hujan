@@ -37,6 +37,10 @@
   transition: all 0.5s ease;
 }
 
+#sidebar-heading{
+  text-decoration: #fff;
+}
+
 #wrapper.toggled #sidebar-wrapper {
   width: 250px;
 }
@@ -125,5 +129,24 @@
   #wrapper.toggled #page-content-wrapper {
       position: relative;
       margin-right: 0;
+  }
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
   }
 }

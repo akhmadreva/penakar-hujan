@@ -2,7 +2,7 @@
     // filename: koneksi.php
     $servername = "localhost";
     $username = "root";
-    $password = "";
+    $password = "root";
     $db_name = "penakar_hujan";
 
     // Create connection
@@ -12,5 +12,10 @@
     if($conn == false) 
     {
         die("Connection failed: " . mysqli_connect_error());
+    }
+
+    //connection success
+    if($conn){
+        echo "Koneksi Berhasil";
     }
 ?>

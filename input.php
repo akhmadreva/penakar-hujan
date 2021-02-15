@@ -1,153 +1,218 @@
-<head>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+    <script>
+        $(function() {
+            $("#date").datepicker({
+                autoclose:true,
+                todayHighlight:true,
+                format:'yyyy-mm-dd',
+                language: 'id'
+            });
+        });
+    </script>
 
+<!-- Page Content -->
+<div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Penakar Hujan Otomatis / Hellman</h3>
+                            </div>
+                            <form action="?page=simpan" method="POST">
+                            <div class="card-body">
+                                <div class="row g-1">
+                                    <div class="col-md-2">
+                                        <label for="tanggal" class="form-label">Tanggal Laporan</label>
+                                        <input type="text" class="form-control" id="date">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-<div class="main">
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Dashboard</h1>
-            <div class="btn-toolbar mb-2 mb-md-0">
-            <div class="btn-group me-2">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-            </div>
-            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                This week
-            </button>
+                        <br>
+ 
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Intensitas Hujan Dalam Menit</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-2">
+                                        <label for="input5menit" class="form-label">5 Menit</label>
+                                        <input type="text" class="form-control" placeholder="5 menit pertama" aria-label="5menit">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="input10menit" class="form-label">10 Menit</label>
+                                        <input type="text" class="form-control" placeholder="10 menit pertama" aria-label="10menit">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="input15menit" class="form-label">15 Menit</label>
+                                        <input type="text" class="form-control" placeholder="15 menit Pertama" aria-label="15menit">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="input30menit" class="form-label">30 Menit</label>
+                                        <input type="text" class="form-control" placeholder="30 menit pertama" aria-label="30menit">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row g-3">
+                                    <div class="col-md-2">
+                                        <label for="input45menit" class="form-label">45 Menit</label>
+                                        <input type="text" class="form-control" placeholder="45 menit pertama" aria-label="45menit">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="input60menit" class="form-label">60 Menit</label>
+                                        <input type="text" class="form-control" placeholder="60 menit pertama" aria-label="60menit">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="input120menit" class="form-label">120 Menit</label>
+                                        <input type="text" class="form-control" placeholder="120 menit Pertama" aria-label="120menit">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Intensitas Hujan Dalam Jam</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-2">
+                                        <label for="input3jam" class="form-label">3 Jam</label>
+                                        <input type="text" class="form-control" placeholder="3 jam pertama" aria-label="3jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="input6jam" class="form-label">6 Jam</label>
+                                        <input type="text" class="form-control" placeholder="6 jam pertama" aria-label="6jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="input12jam" class="form-label">12 Jam</label>
+                                        <input type="text" class="form-control" placeholder="12 jam Pertama" aria-label="12jam">
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+
+                        <br>
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Intensitas Hujan Per Jam</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-2">
+                                        <label for="stasiun" class="form-label">07 - 08</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="3jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="no_stasiun" class="form-label">08 - 09</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="6jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="kabupaten" class="form-label">09 - 10</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="12jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="ketinggian" class="form-label">10 - 11</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="3jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="bulan" class="form-label">11 - 12</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="6jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="tahun" class="form-label">12 - 13</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="12jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="form" class="form-label">13 - 14</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="3jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="nama_pengamat" class="form-label">14 - 15</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="6jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="stasiun" class="form-label">15 - 16</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="3jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="no_stasiun" class="form-label">16 - 17</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="6jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="kabupaten" class="form-label">17 - 18</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="12jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="ketinggian" class="form-label">18 - 19</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="3jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="bulan" class="form-label">19 - 20</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="6jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="form" class="form-label">20 - 21</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="3jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="nama_pengamat" class="form-label">21 - 22</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="6jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="stasiun" class="form-label">22 - 23</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="3jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="no_stasiun" class="form-label">23 - 00</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="6jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="kabupaten" class="form-label">00 - 01</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="12jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="ketinggian" class="form-label">01 - 02</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="3jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="bulan" class="form-label">02 - 03</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="6jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="tahun" class="form-label">03 - 04</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="12jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="form" class="form-label">04 - 05</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="3jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="nama_pengamat" class="form-label">05 - 06</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="6jam">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="nama_pengamat" class="form-label">06 - 07</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="6jam">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+                            <div class="col-6">
+                                <button type="reset" class="btn btn-danger">Reset</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                    </form>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <canvas class="my-4 w-100 chartjs-render-monitor" id="myChart" width="547" height="230" style="display: block; width: 547px; height: 230px;"></canvas>
-
-        <h2>Section title</h2>
-        <div class="table-responsive">
-            <table class="table table-striped table-sm">
-            <thead>
-                <tr>
-                <th>#</th>
-                <th>Header</th>
-                <th>Header</th>
-                <th>Header</th>
-                <th>Header</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
-                <td>sit</td>
-                </tr>
-                <tr>
-                <td>1,002</td>
-                <td>amet</td>
-                <td>consectetur</td>
-                <td>adipiscing</td>
-                <td>elit</td>
-                </tr>
-                <tr>
-                <td>1,003</td>
-                <td>Integer</td>
-                <td>nec</td>
-                <td>odio</td>
-                <td>Praesent</td>
-                </tr>
-                <tr>
-                <td>1,003</td>
-                <td>libero</td>
-                <td>Sed</td>
-                <td>cursus</td>
-                <td>ante</td>
-                </tr>
-                <tr>
-                <td>1,004</td>
-                <td>dapibus</td>
-                <td>diam</td>
-                <td>Sed</td>
-                <td>nisi</td>
-                </tr>
-                <tr>
-                <td>1,005</td>
-                <td>Nulla</td>
-                <td>quis</td>
-                <td>sem</td>
-                <td>at</td>
-                </tr>
-                <tr>
-                <td>1,006</td>
-                <td>nibh</td>
-                <td>elementum</td>
-                <td>imperdiet</td>
-                <td>Duis</td>
-                </tr>
-                <tr>
-                <td>1,007</td>
-                <td>sagittis</td>
-                <td>ipsum</td>
-                <td>Praesent</td>
-                <td>mauris</td>
-                </tr>
-                <tr>
-                <td>1,008</td>
-                <td>Fusce</td>
-                <td>nec</td>
-                <td>tellus</td>
-                <td>sed</td>
-                </tr>
-                <tr>
-                <td>1,009</td>
-                <td>augue</td>
-                <td>semper</td>
-                <td>porta</td>
-                <td>Mauris</td>
-                </tr>
-                <tr>
-                <td>1,010</td>
-                <td>massa</td>
-                <td>Vestibulum</td>
-                <td>lacinia</td>
-                <td>arcu</td>
-                </tr>
-                <tr>
-                <td>1,011</td>
-                <td>eget</td>
-                <td>nulla</td>
-                <td>Class</td>
-                <td>aptent</td>
-                </tr>
-                <tr>
-                <td>1,012</td>
-                <td>taciti</td>
-                <td>sociosqu</td>
-                <td>ad</td>
-                <td>litora</td>
-                </tr>
-                <tr>
-                <td>1,013</td>
-                <td>torquent</td>
-                <td>per</td>
-                <td>conubia</td>
-                <td>nostra</td>
-                </tr>
-                <tr>
-                <td>1,014</td>
-                <td>per</td>
-                <td>inceptos</td>
-                <td>himenaeos</td>
-                <td>Curabitur</td>
-                </tr>
-                <tr>
-                <td>1,015</td>
-                <td>sodales</td>
-                <td>ligula</td>
-                <td>in</td>
-                <td>libero</td>
-                </tr>
-            </tbody>
-            </table>
-        </div>
-    </main>
-</div>
+        <!-- /#page-content-wrapper -->
