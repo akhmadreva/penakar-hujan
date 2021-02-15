@@ -37,26 +37,29 @@ session_start();
             <ul class="sidebar-nav" id="navcontent">
                 <li class="sidebar-brand">
                     <a>
-                        BMKG
+                        BMKG Soft
                     </a>
                 </li>
                 <li>
                     <a href="index.php?page=login">Dashboard</a>
                 </li>
                 <li>
+                    <a href="index.php?page=user">User</a>
+                </li>
+                <li>
                     <a href="index.php?page=input">Input</a>
                 </li>
                 <li>
-                    <a href="index.php?page=data">Data</a>
+                    <a href="index.php?page=data">Laporan</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="#">Status</a>
                 </li>
                 <li>
                     <a href="#">Services</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#">Logout</a>
                 </li>
             </ul>
         </div>

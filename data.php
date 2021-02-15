@@ -1,7 +1,3 @@
-<?
-include "koneksi.php";
-?>
-
 <div id="page-content-wrapper">
     <div class="container-fluid">
         <div class="row">
@@ -11,33 +7,39 @@ include "koneksi.php";
             <tr>
                 <th>No.</th>
                 <th>Pengamat</th>
-                <th>Stasiun</th>
-                <th>Data Hujan</th>
+                <th>NIP</th>
+                <th>Nomor Stasiun</th>
+                <th>Nama Stasiun</th>
+                <th>Tanggal Input</th>
+                <th>Laporan</th>
                 <th>Aksi</th>
                 <th></th>
             </tr>
 
-            <?php
-            if(mysqli_num_rows($result) > 0) 
-            {
-                $no = 0;
-                // output data of each row
-                while ($row = mysqli_fetch_assoc($result)) 
-                {
-                    $no++;
-                    
-                    echo "<tr>
-                        <td>".$no."</td>
-                        <td>".$row['nip']."</td>
-                        <td>".$row['nama']."</td>
-                        <td>".$row['nama_stasiun']."</td>
-                        <td>".$row['tanggal']."</td>
-                        <td><a  class=' btn btn-primary fa fa-pencil' href='?page=form_edit_objek_wisata&id=".$row['id_objek_wisata']."'>Edit</a></td>
-                        <td><a class='btn btn-danger fa fa-trash' href='?page=hapus_objek_wisata&id=".$row['id_objek_wisata']."'>Hapus</a></td>
-                        </tr>";
-                }
-            }
+            <?php 
+                include 'koneksi.php';
+                $no = 1;
+                $data = mysqli_query($conn,"SELECT * FROM user INNER JOIN stasiun , data_hujan");
+                while($d = mysqli_fetch_array($data)){
             ?>
+			<tr>
+				<td><?php echo $no++; ?></td>
+				<td><?php echo $d['nama']; ?></td>
+				<td><?php echo $d['nip']; ?></td>
+				<td><?php echo $d['no_stasiun']; ?></td>
+                <td><?php echo $d['nama_stasiun']; ?></td>
+                <td><?php echo $d['tanggal']; ?></td>
+				<td>
+                <a href="edit.php?id=<?php echo $d['id']; ?>">UNDUH</a>
+                </td>
+                <td>
+					<a href="edit.php?id=<?php echo $d['id']; ?>">EDIT</a>
+					<a href="hapus.php?id=<?php echo $d['id']; ?>">HAPUS</a>
+				</td>
+			</tr>
+			<?php 
+		}
+		?>
 
             </table>
         </div>

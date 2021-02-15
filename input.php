@@ -53,9 +53,6 @@
                                         <label for="input30menit" class="form-label">30 Menit</label>
                                         <input type="text" class="form-control" placeholder="30 menit pertama" aria-label="30menit">
                                     </div>
-                                </div>
-                                <br>
-                                <div class="row g-3">
                                     <div class="col-md-2">
                                         <label for="input45menit" class="form-label">45 Menit</label>
                                         <input type="text" class="form-control" placeholder="45 menit pertama" aria-label="45menit">
