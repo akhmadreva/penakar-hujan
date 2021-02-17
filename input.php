@@ -23,7 +23,7 @@
                                 <div class="row g-1">
                                     <div class="col-md-2">
                                         <label for="tanggal" class="form-label">Tanggal Laporan</label>
-                                        <input type="text" class="form-control" id="date">
+                                        <input type="text" class="form-control" id="date" name="tanggal">
                                     </div>
                                 </div>
                             </div>
