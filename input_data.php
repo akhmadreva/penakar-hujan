@@ -2,6 +2,7 @@
 include 'koneksi.php';
 
 $tanggal = $_POST['tanggal'];
+
 $lima_mnt = $_POST['lima_mnt'];
 $seuluh_mnt = $_POST['sepuluh_mnt'];
 $limabelas_mnt = $_POST['limabelas_mnt'];
