@@ -2,7 +2,7 @@
     // filename: koneksi.php
     $servername = "localhost";
     $username = "root";
-    $password = "root";
+    $password = "";
     $db_name = "penakar_hujan";
 
     // Create connection

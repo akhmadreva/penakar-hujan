@@ -19,7 +19,7 @@
             <?php 
                 include 'koneksi.php';
                 $no = 1;
-                $data = mysqli_query($conn,"SELECT * FROM user INNER JOIN stasiun , data_hujan");
+                $data = mysqli_query($conn,"SELECT * FROM user INNER JOIN stasiun");
                 while($d = mysqli_fetch_array($data)){
             ?>
 			<tr>
@@ -28,7 +28,6 @@
 				<td><?php echo $d['nip']; ?></td>
 				<td><?php echo $d['no_stasiun']; ?></td>
                 <td><?php echo $d['nama_stasiun']; ?></td>
-                <td><?php echo $d['tanggal']; ?></td>
 				<td>
                 <a href="edit.php?id=<?php echo $d['id']; ?>">UNDUH</a>
                 </td>
