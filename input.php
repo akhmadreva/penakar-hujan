@@ -16,7 +16,7 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3>Penakar Hujan Otomatis / Hellman</h3>
+                                <h3>Sistem Informasi Input Data Curah Hujan Otomatis / Tipe Hellman Stasiun Klimatologi Semarang</h3>
                             </div>
                             <form action="?page=simpan" method="POST">
                             <div class="card-body">
