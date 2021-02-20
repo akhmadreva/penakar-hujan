@@ -53,7 +53,7 @@ session_start();
                     <a href="index.php?page=data">Laporan</a>
                 </li>
                 <li>
-                    <a href="#">Status</a>
+                    <a href="index.php?page=grafik">Status</a>
                 </li>
                 <li>
                     <a href="#">Services</a>
