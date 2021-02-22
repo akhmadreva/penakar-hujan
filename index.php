@@ -20,7 +20,7 @@ session_start();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
     <!-- datepicker bootstrap -->
-    <link rel="stylesheet" href="/assets/bootstrap-datepicker/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="assets/bootstrap-datepicker/css/bootstrap-datepicker.min.css">
     <script src="assets/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="assets/bootstrap-datepicker/locales/bootstrap-datepicker.id.min.js"></script>
     <title>Penakar Hujan</title>

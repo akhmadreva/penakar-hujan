@@ -18,7 +18,7 @@
                             <div class="card-header">
                                 <h3>Sistem Informasi Input Data Curah Hujan Otomatis / Tipe Hellman Stasiun Klimatologi Semarang</h3>
                             </div>
-                            <form action="?page=input_data" method="POST">
+                            <form action="?page=input_data.php" method="POST">
                             <div class="card-body">
                                 <div class="row g-1">
                                     <div class="col-md-2">
