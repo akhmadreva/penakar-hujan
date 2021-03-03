@@ -3,19 +3,17 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $db_name = "penakar_hujan";
+    $db_name = "hujan";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $db_name);
+
+    // Create connection CURD
+    $koneksi = mysqli_connect("localhost","root","","hujan");
 
     // Check connection
     if($conn == false) 
     {
         die("Connection failed: " . mysqli_connect_error());
-    }
-
-    //connection success
-    if($conn){
-        echo "Koneksi Berhasil";
     }
 ?>

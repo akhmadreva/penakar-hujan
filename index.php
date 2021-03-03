@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 
 <!doctype html>
 <html lang="en">
@@ -37,23 +34,23 @@ session_start();
             <ul class="sidebar-nav" id="navcontent">
                 <li class="sidebar-brand">
                     <a>
-                        BMKG Soft
+                       Sipejan BMKG Semarang
                     </a>
                 </li>
                 <li>
-                    <a href="index.php?page=login">Dashboard</a>
+                    <a href="index.php?page=grafik">Grafik</a>
                 </li>
                 <li>
-                    <a href="index.php?page=user">User</a>
+                    <a href="index.php?page=data-user">User</a>
                 </li>
                 <li>
-                    <a href="index.php?page=input">Input</a>
+                    <a href="index.php?page=data-menit">Data Hujan Per Menit</a>
                 </li>
                 <li>
-                    <a href="index.php?page=data">Laporan</a>
+                    <a href="index.php?page=data-hujan">Data Hujan Per Jam</a>
                 </li>
                 <li>
-                    <a href="index.php?page=grafik">Status</a>
+                    <a href="index.php?page=data-hujan-all">Input Semua Data Hujan</a>
                 </li>
                 <li>
                     <a href="#">Services</a>
@@ -64,6 +61,21 @@ session_start();
             </ul>
         </div>
         
+        <br>
+        <div class="col-lg-12">
+            <?php 
+            if(isset($_GET['pesan'])){
+                $pesan = $_GET['pesan'];
+                if($pesan == "input"){
+                    echo "<p class='alert alert-success'>Data Berhasil Di Input</p>";
+                }else if($pesan == "update"){
+                    echo "<p class='alert alert-info'>Data Berhasil Di Update</p>";
+                }else if($pesan == "hapus"){
+                    echo "<p class='alert alert-warning'>Data Berhasil Di Hapus</p>";
+                }
+            }
+            ?>
+        </div>
         <!-- /#sidebar-wrapper -->
 
         <?php
@@ -87,7 +99,7 @@ session_start();
             else
             {
                 // tampilkan halaman default dari website kita
-                require_once("login.php");
+                require_once("grafik.php");
             }
         ?>
  
