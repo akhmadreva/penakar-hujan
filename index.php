@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="assets/bootstrap-datepicker/css/bootstrap-datepicker.min.css">
     <script src="assets/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="assets/bootstrap-datepicker/locales/bootstrap-datepicker.id.min.js"></script>
+    <link rel="icon" 
+      type="image/png" 
+      href="logo.png" /> 
     <title>Penakar Hujan</title>
   </head>
   <body>
