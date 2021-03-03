@@ -35,7 +35,7 @@
 	<h3>Data Hujan</h3>
 
 	<div class="table-responsive">
-	<table border="1" class="table">
+	<table border="1" class="table table-bordered border-dark" rules="all">
 		<tr>
 			<td>-</td>
 			<td colspan="10"><center>Jumlah pada masing-masing periode waktu (mm)</center></td>
@@ -83,7 +83,7 @@
 		</tr>
 		<?php 
 		include "koneksi.php";
-		$sql = "SELECT * FROM data_hujan WHERE tanggal ORDER BY tanggal";
+		$sql = "SELECT * FROM data_hujan WHERE tanggal ORDER BY tanggal ASC";
         $hasil=mysqli_query($conn,$sql);
 		$nomor = 1;
 		while($data = mysqli_fetch_array($hasil)){

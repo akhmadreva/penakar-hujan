@@ -21,7 +21,7 @@
 			<a class="tombol" href="index.php?page=form-input-menit">+ Tambah Data Baru</a>
 			<br><br>
 			<div class="table-responsive">
-			<table border="1" class="table">
+			<table border="1" class="table table-bordered border-dark">
 				<tr>
 					<th>No</th>
 					<th>Tanggal</th>
@@ -39,7 +39,7 @@
 				</tr>
 				<?php 
 				include "koneksi.php";
-				$sql = "SELECT * FROM hujan ORDER BY tanggal ASC";
+				$sql = "SELECT * FROM data_hujan ORDER BY tanggal ASC";
 				$hasil=mysqli_query($conn,$sql);
 				$nomor = 1;
 				while($data = mysqli_fetch_array($hasil)){
@@ -47,16 +47,16 @@
 				<tr>
 					<td><?php echo $nomor++; ?></td>
 					<td><?php echo date ( 'd F Y' , strtotime ($data['tanggal'])); ?></td>
-					<td><?php echo $data['lima']; ?></td>
-					<td><?php echo $data['sepuluh']; ?></td>
-					<td><?php echo $data['limabelas']; ?></td>
-					<td><?php echo $data['tigapuluh']; ?></td>
-					<td><?php echo $data['empatlima']; ?></td>
-					<td><?php echo $data['enampuluh']; ?></td>
+					<td><?php echo $data['lima_mnt']; ?></td>
+					<td><?php echo $data['sepuluh_mnt']; ?></td>
+					<td><?php echo $data['limabelas_mnt']; ?></td>
+					<td><?php echo $data['tigapuluh_mnt']; ?></td>
+					<td><?php echo $data['empatlima_mnt']; ?></td>
+					<td><?php echo $data['enampuluh_mnt']; ?></td>
 					<td><?php echo $data['seratusduapuluh']; ?></td>
-					<td><?php echo $data['tigajam']; ?></td>
-					<td><?php echo $data['enamjam']; ?></td>
-					<td><?php echo $data['duabelasjam']; ?></td>
+					<td><?php echo $data['tiga_jm']; ?></td>
+					<td><?php echo $data['enam_jm']; ?></td>
+					<td><?php echo $data['duabelas_jm']; ?></td>
 					<td>
 						<a class="edit" href="?page=edit-menit&id=<?php echo $data['id']; ?>">Edit</a> |
 						<a class="hapus" href="?page=hapus-menit&id=<?php echo $data['id']; ?>">Hapus</a>					
