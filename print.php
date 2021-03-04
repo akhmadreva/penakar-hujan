@@ -22,52 +22,59 @@ ob_start();
 </head>
 <body>
 	<div>
-    <center><h4>PENAKAR HUJAN OTOMATIS/HELLMAN</h4>
-    <table>
-        <tr>
-            <td>Nama Stasiun</td>
-            <td>:</td>
-            <td>Klimatologi Semarang</td>
-            <td>Laporan Bulan</td>
-            <td>:</td>
-            <td><?php
-                echo date  ( 'F' , strtotime ($_POST['date1']));
-                $query = "SELECT * FROM data_hujan WHERE tanggal='".$_POST['date1']."'";
-                ?></td>
-            <td>Form</td>
-            <td>:</td>
-            <td>A</td>
-        </tr>
-        <tr>
-            <td>No. Stasiun</td>
-            <td>:</td>
-            <td>96835</td>
-            <td>Tahun</td>
-            <td>:</td>
-            <td><?php
-                echo date  ( 'Y' , strtotime ($_POST['date1']));
+    
+    <center><h3>PENAKAR HUJAN OTOMATIS/HELLMAN</h3></center>
+    <br>
+
+    <div class="table-responsive">
+    <table style="width: 618px; height: 99px;">
+    <tbody>
+    <tr>
+    <td style="width: 145px;">Nama Stasiun</td>
+    <td style="width: 10px;">:</td>
+    <td style="width: 393px;">Klimatologi Semarang</td>
+    <td style="width: 195px;">Laporan Bulan</td>
+    <td style="width: 10px;">:</td>
+    <td style="width: 256px;"><?php
+                    echo date  ( 'F' , strtotime ($_POST['date1']));
                     $query = "SELECT * FROM data_hujan WHERE tanggal='".$_POST['date1']."'";
-                ?></td>
-            <td colspan="3"> </td>
-        </tr>
-        <tr>
-            <td>Kabupaten</td>
-            <td>:</td>
-            <td>Semarang</td>
-            <td colspan="3"></td>
-            <td colspan="3"></td>
-        </tr>
-        <tr>
-            <td>Ketinggian</td>
-            <td>:</td>
-            <td>3m/dpl</td>
-            <td colspan="3"></td>
-            <td>Nama Pengamat</td>
-            <td>:</td>
-            <td></td>
-        </tr>
+                    ?></td>
+    <td style="width: 40px;">Form</td>
+    <td style="width: 13px;">:</td>
+    <td style="width: 18px;">A</td>
+    </tr>
+    <tr>
+    <td style="width: 145px;">No. Stasiun</td>
+    <td style="width: 10px;">:</td>
+    <td style="width: 393px;">96835</td>
+    <td style="width: 195px;">Tahun</td>
+    <td style="width: 10px;">:</td>
+    <td style="width: 256px;"><?php
+                    echo date  ( 'Y' , strtotime ($_POST['date1']));
+                        $query = "SELECT * FROM data_hujan WHERE tanggal='".$_POST['date1']."'";
+                    ?></td>
+    <td style="width: 71px;" colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+    <td style="width: 145px;">Kabupaten</td>
+    <td style="width: 10px;">:</td>
+    <td style="width: 393px;">Semarang</td>
+    <td style="width: 195px;">Nama Pengamat&nbsp;</td>
+    <td style="width: 10px;">:</td>
+    <td style="width: 256px;">&nbsp;</td>
+    <td style="width: 71px;" colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+    <td style="width: 145px;">Ketinggian</td>
+    <td style="width: 10px;">:</td>
+    <td style="width: 393px;">3m/dpl</td>
+    </tr>
+    </tbody>
     </table>
-    </center>
+    </div>
+
+    <br>
+
     <br/>
 		<table border="1">
             <tr>

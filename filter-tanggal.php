@@ -11,7 +11,7 @@
 		    <h1>Penakar Hujan Hellman</h1>
 
  
-		<br/><br/>
+    <br/><br/>
     <a class="tombol" href="index.php">Home</a> |
     <a href="index.php?page=data-hujan-all">Lihat Semua Data</a>
         <br/>
@@ -24,8 +24,11 @@
         <button type="submit" name="submit" class="btn btn-primary">Cari</button>
     </form>
     <br/>
+
     <center><h3>PENAKAR HUJAN OTOMATIS/HELLMAN</h3></center>
-    
+    <br>
+
+    <div class="table-responsive">
     <table style="width: 618px; height: 99px;">
     <tbody>
     <tr>
@@ -70,8 +73,8 @@
     </tr>
     </tbody>
     </table>
-
-    <br/>
+    </div>
+    <br>
 
     <div class="table-responsive">
 		<table border="1" class="table table-bordered border-dark">

@@ -25,7 +25,7 @@
 	<a class="tombol" href="index.php?page=form-input-hujan">+ Tambah Data Baru</a>
     <h3>Data Hujan Perjam</h3>
     <div class="table-responsive">
-	<table border="1" class="table">
+	<table border="1" class="table table-bordered border-dark">
 		<tr>
 			<th>No</th>
 			<th>Tanggal</th>
@@ -57,7 +57,7 @@
 		</tr>
 		<?php 
 		include "koneksi.php";
-		$sql = "SELECT * FROM hujanperjam ORDER BY tanggal ASC ";
+		$sql = "SELECT * FROM data_hujan ORDER BY tanggal ASC ";
         $hasil=mysqli_query($conn,$sql);
 		$nomor = 1;
 		while($data = mysqli_fetch_array($hasil)){
