@@ -14,11 +14,7 @@
         <div class="row">
             <div class="col-lg-12">	
 			<h1>Penakar Hujan Hellman</h1>
-	
-	<br/>
- 
-	<a href="index.php?page=data-hujan-all">Lihat Semua Data</a>
-	<a href="index.php">Home</a>
+
  
 	<br/>
 	<h3>Input data baru</h3>	
@@ -119,7 +115,7 @@
 			</tr>
 			<tr>
 				<td></td>
-				<td><input type="submit" value="Simpan"></td>					
+				<td><input type="submit" value="Simpan" class="btn btn-primary"></td>					
 			</tr>				
 		</table>
 	</form>

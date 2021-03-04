@@ -53,13 +53,13 @@
                 <a href="index.php?page=data-hujan">Data Hujan Per Jam</a>
                 </li>
                 <li>
-                    <a href="index.php?page=data-hujan-all">Cetak Semua Data Hujan</a>
+                    <a href="index.php?page=data-hujan-all">Data Hujan</a>
                 </li>
                 <li>
                     <a href="index.php?page=filter-tanggal">Data Hujan Berdasar Tanggal</a>
                 </li>
                 <li>
-                    <a href="#">Logout</a>
+                    <a href="index.php?page=form-input-hujan-all">Input Data Hujan</a>
                 </li>
             </ul>
         </div>

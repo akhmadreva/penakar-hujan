@@ -45,5 +45,5 @@ $sql = "INSERT INTO data_hujan VALUES('','$tanggal','$lima_mnt','$sepuluh_mnt','
 ,'$empat','$lima','$enam')";
 mysqli_query($conn,$sql);
  
-header("location:index.php?pesan=input");
+header("location:index.php?page=data-hujan-all");
 ?>

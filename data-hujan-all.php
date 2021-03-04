@@ -18,12 +18,6 @@
 	}
 	?>
 	<br/>
-    <a class="tombol" href="index.php">Home</a> |
-	<a class="tombol" href="index.php?page=form-input-hujan-all">+ Tambah Data Baru</a> |
-    <a class="tombol" href="index.php?page=filter-tanggal">Lihat data Berdasarkan Tanggal</a> |
-	<a class="tombol" href="index.php?page=print" target="_blank">Cetak</a>
-	<br/>
-	<br/>
 	<form method="POST" action="print.php" class="form-inline mt-3" target="_blank">
         <label for="date1">Tanggal mulai </label>
         <input type="date" name="date1" id="date1" class="form-control mr-2">
@@ -39,7 +33,6 @@
 		<tr>
 			<td>-</td>
 			<td colspan="10"><center>Jumlah pada masing-masing periode waktu (mm)</center></td>
-			<td rowspan="2"><center>Tanggal</center></td>
 			<td colspan="24"><center>JUMLAH HUJAN TIAP JAM (MILIMETER)</center></td>
 			<td rowspan="2"><center>Jumlah 24 Jam</center></td>
 			<td rowspan="2"><center>Opsi</center></td>
@@ -83,7 +76,7 @@
 		</tr>
 		<?php 
 		include "koneksi.php";
-		$sql = "SELECT * FROM data_hujan WHERE tanggal ORDER BY tanggal ASC";
+		$sql = "SELECT * FROM data_hujan WHERE tanggal ORDER BY tanggal DESC LIMIT 10";
         $hasil=mysqli_query($conn,$sql);
 		$nomor = 1;
 		while($data = mysqli_fetch_array($hasil)){
@@ -106,7 +99,6 @@
 			<td><?php echo $data['tiga_jm']; ?></td>
 			<td><?php echo $data['enam_jm']; ?></td>
 			<td><?php echo $data['duabelas_jm']; ?></td>
-			<td><?php echo $nomor++; ?></td>
             <td><?php echo $data['tujuh']; ?></td>
             <td><?php echo $data['delapan']; ?></td>
             <td><?php echo $data['sembilan']; ?></td>

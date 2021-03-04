@@ -11,9 +11,6 @@
 		    <h1>Penakar Hujan Hellman</h1>
 
  
-    <br/><br/>
-    <a class="tombol" href="index.php">Home</a> |
-    <a href="index.php?page=data-hujan-all">Lihat Semua Data</a>
         <br/>
         <center>
 	<form method="POST" action="" class="form-inline mt-3">
@@ -185,7 +182,7 @@
             <?php
                 $j=mysqli_query($conn, "SELECT SUM(tujuh) AS jml_7, SUM(delapan) AS jml_8, SUM(sembilan) AS jml_9, SUM(sepuluh) AS jml_10, SUM(sebelas) AS jml_11, SUM(duabelas) AS jml_12, SUM(tigabelas) AS jml_13
                 , SUM(empatbelas) AS jml_14, SUM(limabelas) AS jml_15, SUM(enambelas) AS jml_16, SUM(tujuhbelas) AS jml_17, SUM(delapanbelas) AS jml_18, SUM(sembilanbelas) AS jml_19, SUM(duapuluh) AS jml_20, SUM(duasatu) AS jml_21, SUM(duadua) AS jml_22
-                , SUM(duatiga) AS jml_23, SUM(duaempat) AS jml_24, SUM(satu) AS jml_1, SUM(dua) AS jml_2, SUM(tiga) AS jml_3, SUM(empat) AS jml_4, SUM(lima) AS jml_5, SUM(enam) AS jml_6 FROM data_hujan");
+                , SUM(duatiga) AS jml_23, SUM(duaempat) AS jml_24, SUM(satu) AS jml_1, SUM(dua) AS jml_2, SUM(tiga) AS jml_3, SUM(empat) AS jml_4, SUM(lima) AS jml_5, SUM(enam) AS jml_6 FROM data_hujan WHERE tanggal BETWEEN '$date1' and '$date2'");
                 while($total = mysqli_fetch_array($j)){
             ?>
             <tr>
@@ -219,9 +216,9 @@
             </tr>
             <?php }?>
             <?php
-                $m=mysqli_query($conn, "SELECT MAX(tujuh) AS jml_7, MAX(delapan) AS jml_8, MAX(sembilan) AS jml_9, MAX(sepuluh) AS jml_10, MAX(sebelas) AS jml_11, MAX(duabelas) AS jml_12, MAX(tigabelas) AS jml_13
-                , MAX(empatbelas) AS jml_14, MAX(limabelas) AS jml_15, MAX(enambelas) AS jml_16, MAX(tujuhbelas) AS jml_17, MAX(delapanbelas) AS jml_18, MAX(sembilanbelas) AS jml_19, MAX(duapuluh) AS jml_20, MAX(duasatu) AS jml_21, SUM(duadua) AS jml_22
-                , MAX(duatiga) AS jml_23, MAX(duaempat) AS jml_24, MAX(satu) AS jml_1, MAX(dua) AS jml_2, MAX(tiga) AS jml_3, MAX(empat) AS jml_4, MAX(lima) AS jml_5, MAX(enam) AS jml_6 FROM data_hujan");
+                $m=mysqli_query($conn, "SELECT MAX(tujuh) AS mak_7, MAX(delapan) AS mak_8, MAX(sembilan) AS mak_9, MAX(sepuluh) AS mak_10, MAX(sebelas) AS mak_11, MAX(duabelas) AS mak_12, MAX(tigabelas) AS mak_13
+                , MAX(empatbelas) AS mak_14, MAX(limabelas) AS mak_15, MAX(enambelas) AS mak_16, MAX(tujuhbelas) AS mak_17, MAX(delapanbelas) AS mak_18, MAX(sembilanbelas) AS mak_19, MAX(duapuluh) AS mak_20, MAX(duasatu) AS mak_21, MAX(duadua) AS mak_22
+                , MAX(duatiga) AS mak_23, MAX(duaempat) AS mak_24, MAX(satu) AS mak_1, MAX(dua) AS mak_2, MAX(tiga) AS mak_3, MAX(empat) AS mak_4, MAX(lima) AS mak_5, MAX(enam) AS mak_6 FROM data_hujan WHERE tanggal BETWEEN '$date1' and '$date2'");
                 while($maks = mysqli_fetch_array($m)){
             ?>
             <tr>
@@ -249,30 +246,30 @@
                     <td></td>
                     <td></td>
                     <td>Max</td>
-                    <td><?php echo $maks['jml_7'];?></td>
-                    <td><?php echo $maks['jml_8'];?></td>
-                    <td><?php echo $maks['jml_9'];?></td>
-                    <td><?php echo $maks['jml_10'];?></td>
-                    <td><?php echo $maks['jml_11'];?></td>
-                    <td><?php echo $maks['jml_12'];?></td>
-                    <td><?php echo $maks['jml_13'];?></td>
-                    <td><?php echo $maks['jml_14'];?></td>
-                    <td><?php echo $maks['jml_15'];?></td>
-                    <td><?php echo $maks['jml_16'];?></td>
-                    <td><?php echo $maks['jml_17'];?></td>
-                    <td><?php echo $maks['jml_18'];?></td>
-                    <td><?php echo $maks['jml_19'];?></td>
-                    <td><?php echo $maks['jml_20'];?></td>
-                    <td><?php echo $maks['jml_21'];?></td>
-                    <td><?php echo $maks['jml_22'];?></td>
-                    <td><?php echo $maks['jml_23'];?></td>
-                    <td><?php echo $maks['jml_24'];?></td>
-                    <td><?php echo $maks['jml_1'];?></td>
-                    <td><?php echo $maks['jml_2'];?></td>
-                    <td><?php echo $maks['jml_3'];?></td>
-                    <td><?php echo $maks['jml_4'];?></td>
-                    <td><?php echo $maks['jml_5'];?></td>
-                    <td><?php echo $maks['jml_6'];?></td>
+                    <td><?php echo $maks['mak_7'];?></td>
+                    <td><?php echo $maks['mak_8'];?></td>
+                    <td><?php echo $maks['mak_9'];?></td>
+                    <td><?php echo $maks['mak_10'];?></td>
+                    <td><?php echo $maks['mak_11'];?></td>
+                    <td><?php echo $maks['mak_12'];?></td>
+                    <td><?php echo $maks['mak_13'];?></td>
+                    <td><?php echo $maks['mak_14'];?></td>
+                    <td><?php echo $maks['mak_15'];?></td>
+                    <td><?php echo $maks['mak_16'];?></td>
+                    <td><?php echo $maks['mak_17'];?></td>
+                    <td><?php echo $maks['mak_18'];?></td>
+                    <td><?php echo $maks['mak_19'];?></td>
+                    <td><?php echo $maks['mak_20'];?></td>
+                    <td><?php echo $maks['mak_21'];?></td>
+                    <td><?php echo $maks['mak_22'];?></td>
+                    <td><?php echo $maks['mak_23'];?></td>
+                    <td><?php echo $maks['mak_24'];?></td>
+                    <td><?php echo $maks['mak_1'];?></td>
+                    <td><?php echo $maks['mak_2'];?></td>
+                    <td><?php echo $maks['mak_3'];?></td>
+                    <td><?php echo $maks['mak_4'];?></td>
+                    <td><?php echo $maks['mak_5'];?></td>
+                    <td><?php echo $maks['mak_6'];?></td>
                     <td></td>
             </tr>
             <?php } ?>

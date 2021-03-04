@@ -46,6 +46,6 @@ mysqli_query($conn, "UPDATE data_hujan SET tanggal='$tanggal', lima_mnt='$lima_m
 , sembilanbelas='$sembilanbelas', duapuluh='$duapuluh', duasatu='$duasatu', duadua='$duadua', duatiga='$duatiga', duaempat='$duaempat', satu='$satu', dua='$dua', tiga='$tiga'
 , empat='$empat', lima='$lima', enam='$enam' WHERE id='$id'");
 
-header("location:data-hujan-all.php?pesan=update");
+header("location:index.php?page=data-hujan-all");
 
 ?>

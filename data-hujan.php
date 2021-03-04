@@ -21,8 +21,6 @@
 	}
 	?>
 	<br/>
-    <a href="index.php">Home</a> ||
-	<a class="tombol" href="index.php?page=form-input-hujan">+ Tambah Data Baru</a>
     <h3>Data Hujan Perjam</h3>
     <div class="table-responsive">
 	<table border="1" class="table table-bordered border-dark">
@@ -57,7 +55,7 @@
 		</tr>
 		<?php 
 		include "koneksi.php";
-		$sql = "SELECT * FROM data_hujan ORDER BY tanggal ASC ";
+		$sql = "SELECT * FROM data_hujan ORDER BY tanggal DESC LIMIT 20";
         $hasil=mysqli_query($conn,$sql);
 		$nomor = 1;
 		while($data = mysqli_fetch_array($hasil)){
@@ -89,10 +87,6 @@
             <td><?php echo $data['empat']; ?></td>
             <td><?php echo $data['lima']; ?></td>
             <td><?php echo $data['enam']; ?></td>
-			<td>
-				<a class="edit" href="?page=edit-hujan&id=<?php echo $data['id']; ?>">Edit</a> |
-				<a class="hapus" href="?page=hapus-hujan&id=<?php echo $data['id']; ?>">Hapus</a>					
-			</td>
 		</tr>
 		<?php } ?>
 	</table>
