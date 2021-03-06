@@ -10,6 +10,6 @@ $password = $_POST['password'];
 
 mysqli_query($koneksi, "UPDATE user SET nip='$nip' , nama='$nama', jabatan='$jabatan', email='$email' , password='$password' WHERE id='$id'");
 
-header("location:index.php?pesan=update");
+header("location:index.php?page=data-user");
 
 ?>

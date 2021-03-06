@@ -16,10 +16,12 @@
 		}
 	}
 	?>
-	<br/>
+	
+    <br>
     <a class="tombol "href="index.php">Home</a> ||
 	<a class="tombol" href="index.php?page=form-input-user">+ Tambah Data Baru</a>
-    <br>
+    <hr>
+    
     <h3>Data Diri Pengamat</h3>
         <table class="table table-striped">
             <tr>
