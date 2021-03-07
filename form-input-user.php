@@ -49,7 +49,11 @@
                         <button type="reset" class="btn btn-danger">Reset</button>
                         <button type="submit" value="simpan" class="btn btn-primary">Submit</button>
                     </div>
-              </form>
+                    <div class="col-sm-6">
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                        <button type="submit" value="simpan" class="btn btn-primary">Submit</button>
+                    </div>
+                  </form>
 
                     </div>
                 </div>
