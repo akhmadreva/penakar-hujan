@@ -256,8 +256,9 @@
             <?php }?>
             <tr>
             <?php
-            $ha=mysqli_query($conn, "SELECT tanggal, lima_mnt + sepuluh_mnt + limabelas_mnt + tigapuluh_mnt + empatlima_mnt + enampuluh_mnt 
-            + seratusduapuluh + tiga_jm + enam_jm + duabelas_jm AS hasil FROM `data_hujan` 
+            $ha=mysqli_query($conn, "SELECT tanggal, tujuh + delapan + sembilan + sepuluh + sebelas + duabelas + tigabelas + empatbelas
+            + limabelas + enambelas + tujuhbelas + delapanbelas + sembilanbelas + duapuluh + duasatu + duadua + duatiga + duaempat + satu + dua + tiga 
+            + empat + lima + enam AS hasil FROM `data_hujan` 
             WHERE tanggal BETWEEN '$date1' AND '$date2' ORDER BY hasil DESC LIMIT 10");
             while($h = mysqli_fetch_array($ha)){
             ?>
@@ -268,8 +269,9 @@
               
             <tr>
                 <?php
-                $h2=mysqli_query($conn, "SELECT tanggal, lima_mnt + sepuluh_mnt + limabelas_mnt + tigapuluh_mnt + empatlima_mnt + enampuluh_mnt 
-                + seratusduapuluh + tiga_jm + enam_jm + duabelas_jm AS hasil FROM `data_hujan` 
+                $h2=mysqli_query($conn, "SELECT tanggal, tujuh + delapan + sembilan + sepuluh + sebelas + duabelas + tigabelas + empatbelas
+                + limabelas + enambelas + tujuhbelas + delapanbelas + sembilanbelas + duapuluh + duasatu + duadua + duatiga + duaempat + satu + dua + tiga 
+                + empat + lima + enam AS hasil FROM `data_hujan` 
                 WHERE tanggal BETWEEN '$date1' AND '$date2' ORDER BY hasil DESC LIMIT 10");
                 while($ha2= mysqli_fetch_array($h2)){
                 ?>
@@ -307,9 +309,18 @@
                     <td><?php echo $maks['mak_4'];?></td>
                     <td><?php echo $maks['mak_5'];?></td>
                     <td><?php echo $maks['mak_6'];?></td>
-                    <td></td>
+                    <?php } ?>
+                <?php
+                $hm=mysqli_query($conn, "SELECT tanggal, tujuh + delapan + sembilan + sepuluh + sebelas + duabelas + tigabelas + empatbelas
+                + limabelas + enambelas + tujuhbelas + delapanbelas + sembilanbelas + duapuluh + duasatu + duadua + duatiga + duaempat + satu + dua + tiga 
+                + empat + lima + enam AS hasil FROM `data_hujan` 
+                WHERE tanggal BETWEEN '$date1' AND '$date2' ORDER BY hasil DESC LIMIT 1");
+                while($ham= mysqli_fetch_array($hm)){
+                ?>
+                        <td><?php echo $ham['hasil'] ?></td>
+                <?php } ?>
             </tr>
-            <?php } ?>
+            
             <tr>
                     <td colspan="36">Jam Pemeriksaan hujan model Obs (Waktu setempat)
                     <br /> 
