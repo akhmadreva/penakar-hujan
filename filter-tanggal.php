@@ -12,6 +12,43 @@
 
  
         <br/>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+    Cetak Data
+</button>
+          
+        <!-- Modal -->
+        <center>
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Cetak Data</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            <form method="POST" action="print.php" class="form-inline mt-3" target="_blank">
+            <table>
+                <tr>
+                <td><label for="date1">Tanggal</label></td>
+                <td><input type="date" name="date1" id="date1" class="form-control mr-2"></td>
+                </tr>
+                <tr>
+                <td><label for="date2">sampai </label></td>
+                <td><input type="date" name="date2" id="date2" class="form-control mr-2"></td>
+                </tr>
+                </table>
+                <br />
+                <center>
+                <button type="submit" name="submit" class="btn btn-primary" >Cetak</button>
+                </center>
+            </form>
+            </div>
+            </div>
+        </div>
+        </div>
+        </center>
         <center>
 	<form method="POST" action="" class="form-inline mt-3">
         <label for="date1">Tanggal mulai </label>
@@ -21,6 +58,8 @@
         <button type="submit" name="submit" class="btn btn-primary">Cari</button>
     </form>
     <br/>
+
+    
 
     <center><h3>PENAKAR HUJAN OTOMATIS/HELLMAN</h3></center>
     <br>
@@ -186,7 +225,7 @@
                 while($total = mysqli_fetch_array($j)){
             ?>
             <tr>
-                    <td colspan="10">Tanggal dan Intensitas Max</td>
+                    <td colspan="10"><center>Tanggal dan Intensitas Max</center></td>
                     <td rowspan="2">Jml</td>
                     <td rowspan="2"><?php echo $total['jml_7'];?></td>
                     <td rowspan="2"><?php echo $total['jml_8'];?></td>
