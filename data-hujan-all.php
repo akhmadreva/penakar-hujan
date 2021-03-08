@@ -17,15 +17,6 @@
 		}
 	}
 	?>
-	<br/>
-	<form method="POST" action="print.php" class="form-inline mt-3" target="_blank">
-        <label for="date1">Tanggal mulai </label>
-        <input type="date" name="date1" id="date1" class="form-control mr-2">
-        <label for="date2">sampai </label>
-        <input type="date" name="date2" id="date2" class="form-control mr-2">
-        <button type="submit" name="submit" class="btn btn-primary" >Print</button>
-    </form>
-
 	<h3>Data Hujan</h3>
 
 	<div class="table-responsive">

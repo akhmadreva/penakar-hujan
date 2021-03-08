@@ -10,6 +10,6 @@ $id = $_GET['id'];
 mysqli_query($koneksi,"delete from user where id='$id'");
  
 // mengalihkan halaman kembali ke index.php
-header("location:index.php?pesan=hapus");
+header("location:index.php?page=data-user");
  
 ?>

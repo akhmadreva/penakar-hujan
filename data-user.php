@@ -19,7 +19,7 @@
 	
     <br>
     <a class="tombol "href="index.php">Home</a> ||
-	<a class="tombol" href="index.php?page=form-input-user">+ Tambah Data Baru</a>
+	<a class="button" href="index.php?page=form-input-user">+ Tambah Data Baru</a>
     <hr>
     
     <h3>Data Diri Pengamat</h3>
