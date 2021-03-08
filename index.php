@@ -1,3 +1,11 @@
+<?php
+include 'koneksi.php';
+ 
+// mengaktifkan session
+session_start();
+ 
+
+?>
 
 <!doctype html>
 <html lang="en">

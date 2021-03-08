@@ -1,21 +1,19 @@
-<div id="page-content-wrapper">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-            <h3>Silahkan Login Terlebih dahulu</h3>
-                <form action="?page=proses_login" method="post">
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" class="form-control" name="email">
-                    </div>
-                    <div class="form-group">
-                        <label>Password</label>
-                        <input type="password" class="form-control" name="password">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php
+include 'koneksi.php';
+ 
+$nip = $_POST['nip'];
+$password = md5($_POST['password']);
+ 
+$login = mysql_query("select * from user where nip='$nip' and password='$password'");
+$cek = mysql_num_rows($login);
+ 
+if($cek > 0){
+ session_start();
+ $_SESSION['nip'] = $nip;
+ $_SESSION['status'] = "login";
+ header("location:index.php");
+}else{
+ header("location:landing-page.php"); 
+}
+ 
+?>
