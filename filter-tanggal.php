@@ -254,36 +254,34 @@
                     <td rowspan="2"><?php echo $t?></td>
             </tr>
             <?php }?>
+            <tr>
+            <?php
+            $ha=mysqli_query($conn, "SELECT tanggal, lima_mnt + sepuluh_mnt + limabelas_mnt + tigapuluh_mnt + empatlima_mnt + enampuluh_mnt 
+            + seratusduapuluh + tiga_jm + enam_jm + duabelas_jm AS hasil FROM `data_hujan` 
+            WHERE tanggal BETWEEN '$date1' AND '$date2' ORDER BY hasil DESC LIMIT 10");
+            while($h = mysqli_fetch_array($ha)){
+            ?>
+                    <td><?php echo date ( 'd' , strtotime ($h['tanggal'])); ?></td>
+                    
+            <?php } ?>
+            </tr>
+              
+            <tr>
+                <?php
+                $h2=mysqli_query($conn, "SELECT tanggal, lima_mnt + sepuluh_mnt + limabelas_mnt + tigapuluh_mnt + empatlima_mnt + enampuluh_mnt 
+                + seratusduapuluh + tiga_jm + enam_jm + duabelas_jm AS hasil FROM `data_hujan` 
+                WHERE tanggal BETWEEN '$date1' AND '$date2' ORDER BY hasil DESC LIMIT 10");
+                while($ha2= mysqli_fetch_array($h2)){
+                ?>
+                        <td><?php echo $ha2['hasil'] ?></td>
+                <?php } ?>
+        
             <?php
                 $m=mysqli_query($conn, "SELECT MAX(tujuh) AS mak_7, MAX(delapan) AS mak_8, MAX(sembilan) AS mak_9, MAX(sepuluh) AS mak_10, MAX(sebelas) AS mak_11, MAX(duabelas) AS mak_12, MAX(tigabelas) AS mak_13
                 , MAX(empatbelas) AS mak_14, MAX(limabelas) AS mak_15, MAX(enambelas) AS mak_16, MAX(tujuhbelas) AS mak_17, MAX(delapanbelas) AS mak_18, MAX(sembilanbelas) AS mak_19, MAX(duapuluh) AS mak_20, MAX(duasatu) AS mak_21, MAX(duadua) AS mak_22
                 , MAX(duatiga) AS mak_23, MAX(duaempat) AS mak_24, MAX(satu) AS mak_1, MAX(dua) AS mak_2, MAX(tiga) AS mak_3, MAX(empat) AS mak_4, MAX(lima) AS mak_5, MAX(enam) AS mak_6 FROM data_hujan WHERE tanggal BETWEEN '$date1' and '$date2'");
                 while($maks = mysqli_fetch_array($m)){
             ?>
-            <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-            </tr>
-                
-            <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
                     <td>Max</td>
                     <td><?php echo $maks['mak_7'];?></td>
                     <td><?php echo $maks['mak_8'];?></td>
