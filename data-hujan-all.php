@@ -125,7 +125,7 @@
             <td><?php echo $data['enam']; ?></td>
 			<td><?php echo $jumlah;?> </td>
 			<td>
-				<a class="edit" href="?page=edit-data-hujan&id=<?php echo $data['id']; ?>">Edit</a> |
+				<a class="edit" href="?page=test-form&id=<?php echo $data['id']; ?>">Edit</a> |
 				<a class="hapus" href="?page=hapus-data-hujan&id=<?php echo $data['id']; ?>">Hapus</a>					
 			</td>
 		</tr>

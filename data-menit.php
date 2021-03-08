@@ -33,7 +33,6 @@
 					<th>3 Jam</th>
 					<th>6 Jam</th>
 					<th>12 Jam</th>
-					<th>Opsi</th>		
 				</tr>
 				<?php 
 				include "koneksi.php";
