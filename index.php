@@ -1,10 +1,5 @@
 <?php
-include 'koneksi.php';
- 
-// mengaktifkan session
-session_start();
- 
-
+    error_reporting(0);
 ?>
 
 <!doctype html>
@@ -33,7 +28,16 @@ session_start();
       href="logo.png" /> 
     <title>Penakar Hujan</title>
   </head>
+
+
   <body>
+
+    <?php 
+        session_start();
+        if($_SESSION['status']!="login"){
+        header("login.php?pesan=belum_login");
+        }
+    ?>
     
   <div id="wrapper">
 
@@ -47,6 +51,18 @@ session_start();
                     <a>
                        Sipejan BMKG Semarang
                     </a>
+                </li>
+                <li>
+                <center>
+                    <div class="card " style="width: 23rem;" >
+                    <div class="card-body">
+                    <a> <center>
+                    Selamat datang, <?php echo $_SESSION['nama']; ?>! 
+                    <br>anda telah login.
+                    </center></a>
+                    </div>
+                    </div>
+                </center>
                 </li>
                 <li>
                     <a href="index.php?page=grafik">Grafik</a>
@@ -68,6 +84,9 @@ session_start();
                 </li>
                 <li>
                     <a href="index.php?page=form-input-hujan-all">Input Data Hujan</a>
+                </li>
+                <li>
+                    <a href="index.php?page=logout">Logout</a>
                 </li>
             </ul>
         </div>
@@ -97,6 +116,21 @@ session_start();
                 // cek apakah halaman yang diminta itu ada atau tidak??
                 if(file_exists($page.".php") == true)
                 {
+                    // kita tambahkan pengecekan login disini
+                    // definisikan halaman yang boleh diakses tanpa login
+                    $exception = ['login']; // bisa ditambah sesuai kebutuhan
+                    
+                    if(!in_array($page,$exception))
+                    {
+                        // tidak ada di pengecualian
+                        if(!isset($_SESSION['is_login']))
+                        {
+                            // redirect ke halaman login
+                            echo "<script>
+                                window.location.replace('login.php');
+                            </script>";
+                        }
+                    }
 
                     // tampilkan halaman sesuai request
                     require_once($page.".php");
