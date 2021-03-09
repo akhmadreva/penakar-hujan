@@ -50,8 +50,7 @@
             <th>03-04</th>
             <th>04-05</th>
             <th>05-06</th>
-            <th>06-07</th>
-            <th>Opsi</th>		
+            <th>06-07</th>	
 		</tr>
 		<?php 
 		include "koneksi.php";
