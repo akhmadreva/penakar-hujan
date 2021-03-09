@@ -116,21 +116,6 @@
                 // cek apakah halaman yang diminta itu ada atau tidak??
                 if(file_exists($page.".php") == true)
                 {
-                    // kita tambahkan pengecekan login disini
-                    // definisikan halaman yang boleh diakses tanpa login
-                    $exception = ['login']; // bisa ditambah sesuai kebutuhan
-                    
-                    if(!in_array($page,$exception))
-                    {
-                        // tidak ada di pengecualian
-                        if(!isset($_SESSION['is_login']))
-                        {
-                            // redirect ke halaman login
-                            echo "<script>
-                                window.location.replace('login.php');
-                            </script>";
-                        }
-                    }
 
                     // tampilkan halaman sesuai request
                     require_once($page.".php");
