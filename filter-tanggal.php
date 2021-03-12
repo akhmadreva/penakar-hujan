@@ -28,7 +28,7 @@
                 </button>
             </div>
             <div class="modal-body">
-            <form method="POST" action="print.php" class="form-inline mt-3" target="_blank">
+            <form method="POST" action="?page=print" class="form-inline mt-3" target="_blank">
             <table>
                 <tr>
                 <td><label for="date1">Tanggal</label></td>
@@ -99,7 +99,13 @@
     <td style="width: 393px;">Semarang</td>
     <td style="width: 195px;">Nama Pengamat&nbsp;</td>
     <td style="width: 10px;">:</td>
-    <td style="width: 256px;">&nbsp;</td>
+    <?php 
+        $us=mysqli_query($conn, "SELECT * FROM user WHERE nama='".$_SESSION['nama']."'");
+        while($er=mysqli_fetch_array($us)) {
+
+    ?>
+    <td style="width: 256px;"><?php echo $er['nama']; ?> / NIP : <?php echo $er['nip']; ?></td>
+    <?php } ?>
     <td style="width: 71px;" colspan="3">&nbsp;</td>
     </tr>
     <tr>
