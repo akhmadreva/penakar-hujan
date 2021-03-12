@@ -11,7 +11,7 @@ $mpdf = new \Mpdf\Mpdf(['orientation' => 'L']);
 //Menggabungkan dengan file koneksi yang telah kita buat
 include 'koneksi.php';
 
-$nama_dokumen='hasil-ekspor';
+$nama_dokumen='Laporan Hujan Bulan' ;
 ob_start();
 ?>
 
@@ -309,6 +309,6 @@ $html = ob_get_contents();
 ob_end_clean();
 
 $mpdf->WriteHTML(utf8_encode($html));
-$mpdf->Output();
+$mpdf->Output($nama_dokumen. ".pdf", 'I');
 $db1->close();
 ?>
