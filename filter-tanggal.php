@@ -28,7 +28,7 @@
                 </button>
             </div>
             <div class="modal-body">
-            <form method="POST" action="?page=print" class="form-inline mt-3" target="_blank">
+            <form method="POST" action="print.php" class="form-inline mt-3" target="_blank">
             <table>
                 <tr>
                 <td><label for="date1">Tanggal</label></td>
