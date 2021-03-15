@@ -40,11 +40,11 @@ $enam = $_POST['enam'];
  
 $prosescek= mysqli_query($conn, "SELECT * FROM data_hujan WHERE tanggal='$_POST[tanggal]'");     
     if (mysqli_num_rows($prosescek) > 0) {
-        echo '<script language="javascript">
-              alert ("Tanggal telah terdaftar di dalam database");
-              window.location="index.php?page=form-input-hujan-all";
-              </script>';
-        exit();
+       echo '<script language="javascript">
+          alert ("Tanggal telah terdaftar di dalam database");
+         window.location="index.php?page=form-input-hujan-all";
+          </script>';
+    exit();
     }
     
     else{ 
@@ -54,6 +54,7 @@ $sql = "INSERT INTO data_hujan VALUES('','$tanggal','$lima_mnt','$sepuluh_mnt','
 ,'$sembilanbelas','$duapuluh','$duasatu','$duadua','$duatiga','$duaempat','$satu','$dua','$tiga'
 ,'$empat','$lima','$enam')";
 mysqli_query($conn,$sql);
- 
+  }
+
 header("location:index.php?page=data-hujan-all");
 ?>
