@@ -1,102 +1,9 @@
 <?php 
-    error_reporting(0);
-
-	include 'koneksi.php';
-
+    header("Content-type: application/vnd-ms-excel");
+    header("Content-Disposition: attachment; filename=Data Pegawai.xls");
 ?>
 
-<div id="page-content-wrapper">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-		    <h1>Penakar Hujan Hellman</h1>
-
- 
-        <br/>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-            Cetak Data
-        </button>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-            Cetak Data Excel 
-        </button>
-        <center>
-        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Cetak Excel</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <form method="POST" action="export_excel.php" class="form-inline mt-3" target="_blank">
-            <table>
-                <tr>
-                <td><label for="date1">Tanggal</label></td>
-                <td><input type="date" name="date1" id="date1" class="form-control mr-2"></td>
-                </tr>
-                <tr>
-                <td><label for="date2">sampai </label></td>
-                <td><input type="date" name="date2" id="date2" class="form-control mr-2"></td>
-                </tr>
-            </table>
-                <br />
-                <center>
-                <button type="submit" name="submit" class="btn btn-primary" >Cetak</button>
-                </center>
-            </form>
-            </div>
-            </div>
-        </div>
-        </div>
-        </center>
-
-        <!-- Modal -->
-        <center>
-        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Cetak Data</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <form method="POST" action="print.php" class="form-inline mt-3" target="_blank">
-            <table>
-                <tr>
-                <td><label for="date1">Tanggal</label></td>
-                <td><input type="date" name="date1" id="date1" class="form-control mr-2"></td>
-                </tr>
-                <tr>
-                <td><label for="date2">sampai </label></td>
-                <td><input type="date" name="date2" id="date2" class="form-control mr-2"></td>
-                </tr>
-            </table>
-                <br />
-                <center>
-                <button type="submit" name="submit" class="btn btn-primary" >Cetak</button>
-                </center>
-            </form>
-            </div>
-            </div>
-        </div>
-        </div>
-        </center>
-        <center>
-	<form method="POST" action="" class="form-inline mt-3">
-        <label for="date1">Tanggal mulai </label>
-        <input type="date" name="date1" id="date1" class="form-control mr-2">
-        <label for="date2">sampai </label>
-        <input type="date" name="date2" id="date2" class="form-control mr-2">
-        <button type="submit" name="submit" class="btn btn-primary">Cari</button>
-    </form>
-    <br/>
-
-    
-
+          
     <center><h3>PENAKAR HUJAN OTOMATIS/HELLMAN</h3></center>
     <br>
 
@@ -135,13 +42,7 @@
     <td style="width: 393px;">Semarang</td>
     <td style="width: 195px;">Nama Pengamat&nbsp;</td>
     <td style="width: 10px;">:</td>
-    <?php 
-        $us=mysqli_query($conn, "SELECT * FROM user WHERE nama='".$_SESSION['nama']."'");
-        while($er=mysqli_fetch_array($us)) {
-
-    ?>
-    <td style="width: 256px;"><?php echo $er['nama']; ?> / NIP : <?php echo $er['nip']; ?></td>
-    <?php } ?>
+    <td style="width: 256px;">SUWARTA / NIP : 196307061988011001 </td>
     <td style="width: 71px;" colspan="3">&nbsp;</td>
     </tr>
     <tr>
