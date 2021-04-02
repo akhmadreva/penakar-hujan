@@ -6,56 +6,23 @@
 
           
     <center><h3>PENAKAR HUJAN OTOMATIS/HELLMAN</h3></center>
-    <br>
-
-    <div class="table-responsive">
-    <table style="width: 618px; height: 99px;">
-    <tbody>
-    <tr>
-    <td >Nama Stasiun</td>
-    <td>:</td>
-    <td style="width: 393px;">Klimatologi Semarang</td>
-    <td style="width: 195px;">Laporan Bulan</td>
-    <td>:</td>
-    <td style="width: 256px;"><?php
+    <p>Nama Stasiun &emsp; : Klimatologi Semarang &emsp;&emsp; Laporan Bulan &emsp; : <?php
                     echo date  ( 'F' , strtotime ($_POST['date1']));
                     $query = "SELECT * FROM data_hujan WHERE tanggal='".$_POST['date1']."'";
-                    ?></td>
-    <td>Form</td>
-    <td>:</td>
-    <td>A</td>
-    </tr>
-    <tr>
-    <td>No. Stasiun</td>
-    <td>:</td>
-    <td>96835</td>
-    <td>Tahun</td>
-    <td>:</td>
-    <td><?php
+                    ?>
+                    &emsp;&emsp; Form &emsp; : A </p>
+    <p>No. Stasiun &emsp;&emsp; : 96835 &emsp;&emsp;&ensp;&ensp;&ensp;&ensp;
+    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; Tahun &emsp; : <?php
                     echo date  ( 'Y' , strtotime ($_POST['date1']));
                         $query = "SELECT * FROM data_hujan WHERE tanggal='".$_POST['date1']."'";
-                    ?></td>
-    <td colspan="3">&nbsp;</td>
-    </tr>
-    <tr>
-    <td>Kabupaten</td>
-    <td>:</td>
-    <td>Semarang</td>
-    <td colspan="3">&nbsp;</td>
-    <td>Nama Pengamat&nbsp;</td>
-    <td>:</td>
-    <td>SUWARTA / NIP : 196307061988011001 </td>
-    </tr>
-    <tr>
-    <td>Ketinggian</td>
-    <td>:</td>
-    <td>3m/dpl</td>
-    </tr>
-    </tbody>
-    </table>
-    </div>
-    <br>
+                    ?> </p>
+    <p>Kabupaten &emsp;&emsp; : Semarang &emsp;&emsp;&emsp;&emsp;&emsp; 
+    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    &ensp;&ensp;  Nama Pengamat &emsp; : SUWARTA / NIP 196307061988011001</p>
+    <p>Ketinggian &emsp;&emsp; : 3m/dpl</p>
 
+    
     <div class="table-responsive">
 		<table border="1" class="table table-bordered border-dark">
             <tr>
