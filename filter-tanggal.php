@@ -13,9 +13,10 @@
 
  
         <br/>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-            Cetak Data
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dataPdf">
+            Cetak Data PDF
         </button>
+
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
             Cetak Data Excel 
         </button>
@@ -24,7 +25,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Cetak Excel</h5>
+                <h5 class="modal-title" id="exampleModalLongTitle">Cetak Data Excel</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -35,8 +36,6 @@
                 <tr>
                 <td><label for="date1">Tanggal</label></td>
                 <td><input type="date" name="date1" id="date1" class="form-control mr-2"></td>
-                </tr>
-                <tr>
                 <td><label for="date2">sampai </label></td>
                 <td><input type="date" name="date2" id="date2" class="form-control mr-2"></td>
                 </tr>
@@ -51,14 +50,13 @@
         </div>
         </div>
         </center>
-
         <!-- Modal -->
         <center>
-        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal fade" id="dataPdf" tabindex="-1" role="dialog" aria-labelledby="dataPdfTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Cetak Data</h5>
+                <h5 class="modal-title" id="dataPdfTitle">Cetak Data PDF</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -69,8 +67,6 @@
                 <tr>
                 <td><label for="date1">Tanggal</label></td>
                 <td><input type="date" name="date1" id="date1" class="form-control mr-2"></td>
-                </tr>
-                <tr>
                 <td><label for="date2">sampai </label></td>
                 <td><input type="date" name="date2" id="date2" class="form-control mr-2"></td>
                 </tr>
